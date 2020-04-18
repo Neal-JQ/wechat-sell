@@ -1,5 +1,6 @@
 package com.neal.sell.service;
 
+import com.neal.sell.dto.CartDTO;
 import com.neal.sell.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,14 +21,14 @@ public interface ProductInfoService {
     ProductInfo save(ProductInfo productInfo);
 
     //加库存
-//    void increaseStock(List<CartDTO> cartDTOList);
+    void increaseStock(List<CartDTO> cartDTOList);
 
     //减库存
-//    void decreaseStock(List<CartDTO> cartDTOList);
+    void decreaseStock(List<CartDTO> cartDTOList);
 
     //上架
-//    ProductInfo onSale(String productId);
+    ProductInfo onSale(String productId);
 
     //下架
-//    ProductInfo offSale(String productId);
+    ProductInfo offSale(String productId);
 }

@@ -30,8 +30,9 @@ public class BuyerProductController {
 
     @GetMapping("/list")
     public ResultVO list(){
+        // 查询所有上架商品
         List<ProductInfo> productInfoList = productInfoService.findUpAll();
-
+        // 查询Category
         List<Integer> productCategoryTypeList = productInfoList.stream().map(ProductInfo::getCategoryType).collect(Collectors.toList());
         List<ProductCategory> productCategoryList = productCategoryService.findByCategoryTypeIn(productCategoryTypeList);
 
